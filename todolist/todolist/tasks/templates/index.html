@@ -6,12 +6,20 @@
 </head>
 <body>
 
+<h1>
+    <div style="text-align: center;">Tasks</div>
+</h1>
+
 {% for task in tasks %}
-    <h1>
-        {{ task.name }} <br>
-    </h1>
-    {{ task.date }} {{ task.time }} at {{ task.location }} <br>
+    <ul>
+        <b> {{ task.name }} </b> <br>
+        <ul>{{ task.date }} {{ task.time }} at {{ task.location }} <br></ul>
+    </ul>
 {% endfor %}
 
 </body>
+<footer>
+    <p><b> Authors: </b> Daniel Santana and Steven Sousa </p>
+    <p><b> Contact us: </b> <a href="mailto: CodingBros@gmail.com"> CodingBros@gmail.com</a></p>
+</footer>
 </html>
