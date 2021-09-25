@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> ToDoList </title>
+</head>
+<body>
+
+{% for task in tasks %}
+    <h1>
+        {{ task.name }} <br>
+    </h1>
+    {{ task.date }} {{ task.time }} at {{ task.location }} <br>
+{% endfor %}
+
+</body>
+</html>
