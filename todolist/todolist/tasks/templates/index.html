@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title> ToDoList </title>
+    <link rel="stylesheet" href="main.css"/>
+    <h1>To Do List </h1>
 </head>
+
 <body>
+<div id="page-container">
+    <div id="content-wrap">
 
-<h1>
-    <div style="text-align: center;">Tasks</div>
-</h1>
+        {% for task in tasks %}
+            <ul>
+                <b> {{ task.name }} </b> <br>
+                <ul>{{ task.date }} {{ task.time }} at {{ task.location }} <br></ul>
+            </ul>
+        {% endfor %}
+    </div>
 
-{% for task in tasks %}
-    <ul>
-        <b> {{ task.name }} </b> <br>
-        <ul>{{ task.date }} {{ task.time }} at {{ task.location }} <br></ul>
-    </ul>
-{% endfor %}
+    <footer class id="footer">
+        <p><b> Authors: </b> Daniel Santana and Steven Sousa </p>
+        <p><b> Contact us: </b> <a href="mailto: CodingBros@gmail.com"> CodingBros@gmail.com</a></p>
+    </footer>
 
+</div>
 </body>
-<footer>
-    <p><b> Authors: </b> Daniel Santana and Steven Sousa </p>
-    <p><b> Contact us: </b> <a href="mailto: CodingBros@gmail.com"> CodingBros@gmail.com</a></p>
-</footer>
+
 </html>
